@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Router } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './Detail.css'
@@ -24,8 +24,6 @@ function Detail() {
     let IDMAS = res[0]?.id;
 
     return (
-    <Router  basename={process.env.PUBLIC_URL}>
-
     <div className="PrincipalCard">
         <div className="Card_img">
         <img src={res[0]?.image} alt={res[0]?.name}/>
@@ -61,7 +59,6 @@ function Detail() {
             </div>    
         </div>
         </div>
-    </Router>
   )
 }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Router} from 'react-router-dom'
 import styled from 'styled-components'
 export default class Landing extends Component {
   render() {
@@ -35,6 +35,7 @@ export default class Landing extends Component {
     }
     `
     return (
+      <Router basename={process.env.PUBLIC_URL}>
       <Div>
           <Link to="/home">
           <Button>
@@ -42,6 +43,7 @@ export default class Landing extends Component {
           </Button>
           </Link>
       </Div>
+      </Router>
     )
   }
 }
