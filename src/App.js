@@ -8,8 +8,8 @@ function App (){
   
   return(
   <div>
-    <Routes basename={process.env.PUBLIC_URL}>
-      <Route exact path="/" element={<Landing/>}/>
+    <Routes >
+      <Route basename={process.env.PUBLIC_URL} exact path="/" element={<Landing/>}/>
       <Route exact path='/home' element={<CardsContainer/>}/>
       <Route exact path="/detail/:id" element={<Detail/>}/>
     </Routes>
