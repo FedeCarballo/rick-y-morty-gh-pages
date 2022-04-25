@@ -8,7 +8,7 @@ function App (){
   
   return(
   <div>
-    <Routes  basename={'/rick-y-morty-gh-pages'}>
+    <Routes  basename='/rick-y-morty-gh-pages'>
       <Route exact path="/" element={<Landing/>}/>
       <Route exact path='/home' element={<CardsContainer/>}/>
       <Route exact path="/detail/:id" element={<Detail/>}/>
