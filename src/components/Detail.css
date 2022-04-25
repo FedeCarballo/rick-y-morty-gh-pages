@@ -1,0 +1,79 @@
+body{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    height: 100vh;
+}
+.PrincipalCard{
+    background-color: rgb(255, 255, 255);
+    margin:60px auto;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 80vh;
+    border: solid rgb(12, 16, 12) 3px;
+    border-radius: 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, 
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.Card_img{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.Card_img img{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.Card_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+}
+
+.Card_text h1{
+    font-size: 7vh;
+}
+.Card_text_sub p{
+    color: grey;
+    font-weight: 400;
+    font-size: 3vh;
+}
+
+.Card_text_sub h2{
+    font-size: 4vh;
+}
+
+.Botoncitos{ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.Botoncitos button {
+    background-color: black;
+    color: white;
+    padding: 2vh;
+    font-size: 2vh;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: all 500ms;
+}
+.Botoncitos button:hover {
+    transform: scaleX(1.05) scaleY(1.05);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.BackHome{
+    background-color: white;
+    color: black;
+}
