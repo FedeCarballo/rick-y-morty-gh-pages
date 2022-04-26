@@ -1,55 +1,63 @@
 import Card from './Card'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-
+import e from './CardsContainer.module.css'
+import {AiFillHome,AiOutlineSearch} from "react-icons/ai";
 function CardsContainer() {
 
   const [apiInfo,SetapiInfo] = useState([]);
+  const [chrBusqueda, SetchrBusqueda] = useState([]); // --->> aca vamos a meter los personajes filtrados y los mostraremos en el array de arriba
+  const [busqueda ,Setbusqueda] = useState(" "); // --->> esto controla lo que vamos a escribir en la searchbar
 
   const url = "https://rickandmortyapi.com/api/character"
 
-  
+  const peticion = async () => {
+   await fetch(url)
+    .then(data => data.json())
+    .then(res => {
+      SetapiInfo(res.results);
+      SetchrBusqueda(res.results)
+    })
+    .catch(err => console.log(err))
+  }
   useEffect(()=>{
-    fetch(url)
-  .then(data => data.json())
-  .then(res => SetapiInfo(res.results))
-  .catch(err => console.log(err))
+    peticion();
   },[])
 
-const DivStyled = styled.div `
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    height: 120vh;
-`
-const Div = styled.div ` 
-    display:flex;
-    flex-wrap: wrap;
-    height: 65vh;
-    justify-content: space-around;
-    flex-direction: row;
-    align-content: space-between;
-`
-const BotonBack  = styled.button `
-    cursor: pointer;
-    font-family:'Courier New', Courier, monospace;
-    padding: 20px;
-    background-color: #000;
-    border-radius: 20px;
-    color: white;
-    font-size: 2.9vh;
-    margin: auto;
-
-`
+  // hacemos la funcion para que capture el valor del imput y lo setee en el array de busqueda
+  const BuscarPersonaje =e =>{
+    Setbusqueda(e.target.value);
+    filtrar(e.target.value)
+  }
+  // a continuacion creamos la funcion para filtrar la busqueda
+  const filtrar = (terminobusqueda) =>{
+    var resultadodebusqueda = chrBusqueda.filter((e) =>{
+      if (e.name.toString().includes(terminobusqueda)){
+        return e
+      }
+    })
+    SetapiInfo(resultadodebusqueda); // <<-- seteamos el estado principal ya que este cambia lo que nos devuelve las Cards
+  }
 
   return (
-    <DivStyled>
-            <Link to='/rick-y-morty-gh-pages'>
-                <BotonBack>Inicio</BotonBack>
-            </Link>
-      <Div>
+    <div className= {e.DivStyled}> 
+      <Link to="/rick-y-morty-gh-pages/CreateCharacter">
+        <button className={e.BotonBack}>
+          CreateCharacter
+        </button>
+      </Link>
+      <Link to='/rick-y-morty-gh-pages'>
+        <button className={e.BotonBack}> <AiFillHome/> Back</button>
+      </Link> 
+      <div className={e.SearchBar}>
+         <input value={busqueda} placeholder="buscar personaje" onChange={BuscarPersonaje}/>
+        <button> <AiOutlineSearch/>Buscar</button>
+      </div>
+      <div className={e.Div}>
+      {/* Si aca le pasaramos chrBusqueda en vez de apiInfo, traeria los resultados pero despues se quedaria en el array vacio */}
         {apiInfo.map(e => < Card url={e.image} name={e.name} status={e.status} location={e.location} id={e.id} />)}
-      </Div>
-    </DivStyled>
+      </div>
+    </div>
   )
 }
 

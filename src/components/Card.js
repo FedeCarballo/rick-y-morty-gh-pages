@@ -10,8 +10,15 @@ function Card({url,name,id}){
     const [style2,Setstyle2] = useState("card2")
 
     const CambiarEstilo = () =>{
-        Setstyle("card1Changed")
-        Setstyle2("card2Changed")
+
+        if(style == "card1" && style2 == "card2"){
+            Setstyle("card1Changed")
+            Setstyle2("card2Changed")
+        }
+        else{
+            Setstyle("card1")
+            Setstyle2("card2")
+        }
     }
     return (
     <div className="card" onClick={CambiarEstilo}>
@@ -24,7 +31,7 @@ function Card({url,name,id}){
             <h2>{name}</h2> 
             </div>
             <div className="card__Subcontainer">
-            <Link to={`/detail/${id}`}>
+            <Link to={`/rick-y-morty-gh-pages/detail/${id}`}>
                 <button>Ver detalle</button>
             </Link>
             </div> 

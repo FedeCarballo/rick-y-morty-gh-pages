@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
+import {GiCardJoker} from "react-icons/gi";
 export default class Landing extends Component {
   render() {
     const Div = styled.div `
@@ -15,6 +16,7 @@ export default class Landing extends Component {
      // Aca se supone que va un position relative para que el boton sea quien tenga el efecto pero me gusto tanto que lo deje asi como estaba
       background-color: black ;
       cursor: pointer;
+      align-content: center;
       color: white;
       padding: 8vh;
       border-radius: 20px;
@@ -38,9 +40,10 @@ export default class Landing extends Component {
       <Div>
           <Link to="/rick-y-morty-gh-pages/home">
           <Button>
-              Home
+             <GiCardJoker/> Mostrar Cards
           </Button>
           </Link>
+          
       </Div>
     )
   }

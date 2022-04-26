@@ -1,0 +1,59 @@
+.DivStyled {
+    background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    height: 120vh;
+}
+
+.Div{
+    display:flex;
+    flex-wrap: wrap;
+    height: 65vh;
+    justify-content: space-around;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.BotonBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 25px;
+    background-color: #000;
+    border-radius: 20px;
+    color: white;
+    font-size: 2vh;
+    margin: auto;
+}
+
+
+
+.SearchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SearchBar input{
+    width: 600px;
+    padding: 2.5vh;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 15px;
+    font-size: 2.5vh;
+    color: white;
+    margin-right: 20px;
+}
+.SearchBar button{
+    display: flex;
+    align-content: center;
+    cursor: pointer;
+    padding: 1.7vh;
+    background-color: rgba(0, 0, 0, 0.356);
+    color: greenyellow;
+    font-size: 3vh;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+.SearchBar button:hover{
+    background-color: rgb(137, 134, 134);
+    color: greenyellow;
+}
