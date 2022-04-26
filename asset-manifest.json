@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/rick-y-morty-gh-pages/static/css/main.32da8703.css",
-    "main.js": "/rick-y-morty-gh-pages/static/js/main.34c5dc6c.js",
+    "main.css": "/rick-y-morty-gh-pages/static/css/main.202363c8.css",
+    "main.js": "/rick-y-morty-gh-pages/static/js/main.e5240b98.js",
     "static/media/image.jpg": "/rick-y-morty-gh-pages/static/media/image.f40f54c5332cc5809e69.jpg",
     "index.html": "/rick-y-morty-gh-pages/index.html",
-    "main.32da8703.css.map": "/rick-y-morty-gh-pages/static/css/main.32da8703.css.map",
-    "main.34c5dc6c.js.map": "/rick-y-morty-gh-pages/static/js/main.34c5dc6c.js.map"
+    "main.202363c8.css.map": "/rick-y-morty-gh-pages/static/css/main.202363c8.css.map",
+    "main.e5240b98.js.map": "/rick-y-morty-gh-pages/static/js/main.e5240b98.js.map"
   },
   "entrypoints": [
-    "static/css/main.32da8703.css",
-    "static/js/main.34c5dc6c.js"
+    "static/css/main.202363c8.css",
+    "static/js/main.e5240b98.js"
   ]
 }
