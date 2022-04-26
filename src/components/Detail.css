@@ -39,7 +39,7 @@ body{
 }
 
 .Card_text h1{
-    font-size: 7vh;
+    font-size: 6.5vh;
 }
 .Card_text_sub p{
     color: grey;
@@ -60,6 +60,7 @@ body{
 }
 
 .Botoncitos button {
+    cursor: pointer;
     background-color: black;
     color: white;
     padding: 2vh;

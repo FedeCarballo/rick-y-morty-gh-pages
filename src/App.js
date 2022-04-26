@@ -10,8 +10,8 @@ function App (){
   <div>
     <Routes >
       <Route path="/rick-y-morty-gh-pages" element={<Landing/>}/>
-      <Route exact path='/home' element={<CardsContainer/>}/>
-      <Route exact path="/detail/:id" element={<Detail/>}/>
+      <Route exact path='/rick-y-morty-gh-pages/home' element={<CardsContainer/>}/>
+      <Route exact path="/rick-y-morty-gh-pages/detail/:id" element={<Detail/>}/>
     </Routes>
   </div>  
   )

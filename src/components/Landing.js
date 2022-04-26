@@ -36,7 +36,7 @@ export default class Landing extends Component {
     `
     return (
       <Div>
-          <Link to="/home">
+          <Link to="/rick-y-morty-gh-pages/home">
           <Button>
               Home
           </Button>

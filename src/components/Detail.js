@@ -9,7 +9,7 @@ function Detail() {
 
     const [apiInfo,SetapiInfo] = useState([]);
 
-    const [estado,Setestado] = useState("alive");
+
 
     const url = "https://rickandmortyapi.com/api/character"
   
@@ -49,13 +49,13 @@ function Detail() {
                 </h2>
             </div>
             <div className='Botoncitos'>
-            <Link to={`/detail/${IDMAS-1}`}>
+            <Link to={`/rick-y-morty-gh-pages/detail/${IDMAS-1}`}>
             {`${IDMAS-1}`>0 ? <button>Ver anterior</button> :  null }
             </Link>
-            <Link to={`/detail/${IDMAS+1} `}>
-               {`${IDMAS+1}`<20 ? <button>Ver siguiente</button> :  null } 
+            <Link to={`/rick-y-morty-gh-pages/detail/${IDMAS+1} `}>
+               {`${IDMAS+1}`<apiInfo.length ? <button>Ver siguiente</button> :  null } 
             </Link>
-            <Link exact to='/home' >
+            <Link exact to='/rick-y-morty-gh-pages/home' >
                 <button className='BackHome'>regresar a home</button>
             </Link>
             </div>    
