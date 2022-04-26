@@ -9,6 +9,8 @@ function Detail() {
 
     const [apiInfo,SetapiInfo] = useState([]);
 
+    const [estado,Setestado] = useState("alive");
+
     const url = "https://rickandmortyapi.com/api/character"
   
     
@@ -42,8 +44,8 @@ function Detail() {
                 <p>
                     Estado Actual: 
                 </p>    
-                <h2>
-                    🟢{res[0]?.status}
+                <h2 className={res[0]?.status}>
+                    🟢 {res[0]?.status}
                 </h2>
             </div>
             <div className='Botoncitos'>
@@ -58,7 +60,7 @@ function Detail() {
             </Link>
             </div>    
         </div>
-        </div>
+    </div>
   )
 }
 

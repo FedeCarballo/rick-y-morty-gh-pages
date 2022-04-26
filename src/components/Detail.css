@@ -77,3 +77,14 @@ body{
     background-color: white;
     color: black;
 }
+
+
+.Dead{
+    background-color: RED;
+}
+.Alive{
+    background-color: green;
+}
+.unknown{
+    background-color: yellow;
+}
