@@ -13,7 +13,6 @@ function Card({url,name,id}){
         Setstyle("card1Changed")
         Setstyle2("card2Changed")
     }
-
     return (
     <div className="card" onClick={CambiarEstilo}>
         <div className={style} >
