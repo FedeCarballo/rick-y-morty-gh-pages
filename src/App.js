@@ -9,9 +9,10 @@ function App (){
   return(
   <div>
     <Routes >
-      <Route exact path="/" element={<Landing/>}/>
+      <Route basename={process.env.PUBLIC_URL} exact path="/" element={<Landing/>}/>
       <Route exact path='/home' element={<CardsContainer/>}/>
       <Route exact path="/detail/:id" element={<Detail/>}/>
+      <Landing/>
     </Routes>
   </div>  
   )
