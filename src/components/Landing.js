@@ -35,7 +35,7 @@ export default class Landing extends Component {
     }
     `
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={/rick-y-morty-gh-pages/}>
       <Div>
           <Link to="/home">
           <Button>
