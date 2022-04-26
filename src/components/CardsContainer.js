@@ -43,7 +43,7 @@ const BotonBack  = styled.button `
 
   return (
     <DivStyled>
-            <Link exact to='/rick-y-morty-gh-pages'>
+            <Link to='/rick-y-morty-gh-pages'>
                 <BotonBack>Inicio</BotonBack>
             </Link>
       <Div>
