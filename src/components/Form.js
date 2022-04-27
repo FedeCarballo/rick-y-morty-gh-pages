@@ -17,9 +17,7 @@ export default function Form() {
     }
   return (
     <div className={c.div}>
-            <Link exact to='/rick-y-morty-gh-pages/home' >
-                <button className={c.Back}>regresar a home</button>
-            </Link>
+
         <form className={c.Formulario} onSubmit={e => handleSubmit(e)}>
             <h1>Agregar personaje</h1>
             <label>Name:</label>
@@ -28,7 +26,10 @@ export default function Form() {
             <input type="text" value={formulario.status} name="status" onChange={e=> handleChange(e)}/>
             <label>location: </label>
             <input type="text"value={formulario.location} name="location" onChange={e=> handleChange(e)}/>
-            <button type='submit'>Create</button>
+            <button type='submit'>Create</button>            
+            <Link exact to='/rick-y-morty-gh-pages/home' >
+                <button className={c.Back}>regresar a home</button>
+            </Link>
         </form>
     </div>
   )

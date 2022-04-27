@@ -2,7 +2,7 @@ import Card from './Card'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import e from './CardsContainer.module.css'
-import {AiFillHome,AiOutlineSearch} from "react-icons/ai";
+import {AiFillHome, AiOutlineUserAdd} from "react-icons/ai";
 function CardsContainer() {
 
   const [apiInfo,SetapiInfo] = useState([]);
@@ -41,17 +41,18 @@ function CardsContainer() {
 
   return (
     <div className= {e.DivStyled}> 
+    <div className={e.DivButtons}>
       <Link to="/rick-y-morty-gh-pages/CreateCharacter">
-        <button className={e.BotonBack}>
-          CreateCharacter
+        <button className={e.BotonBack2}>
+         <AiOutlineUserAdd/> Create new Character
         </button>
       </Link>
       <Link to='/rick-y-morty-gh-pages'>
         <button className={e.BotonBack}> <AiFillHome/> Back</button>
       </Link> 
+    </div>
       <div className={e.SearchBar}>
          <input value={busqueda} placeholder="buscar personaje" onChange={BuscarPersonaje}/>
-        <button> <AiOutlineSearch/>Buscar</button>
       </div>
       <div className={e.Div}>
       {/* Si aca le pasaramos chrBusqueda en vez de apiInfo, traeria los resultados pero despues se quedaria en el array vacio */}

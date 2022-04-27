@@ -12,22 +12,37 @@
     align-content: space-between;
 }
 
-.BotonBack {
+.DivButtons{
+    width: 90%;
     display: flex;
-    justify-content: center;
+    margin: auto;
+    justify-content: space-around;
     align-items: center;
+    align-content: center;
+}
+.BotonBack {
     text-decoration: none;
+    align-content: center;
     cursor: pointer;
     padding: 25px;
     background-color: #000;
     border-radius: 20px;
     color: white;
     font-size: 2vh;
-    margin: auto;
+    margin: 40px auto;
 }
-
-
-
+.BotonBack2 {
+    text-decoration: none;
+    align-content: center;
+    cursor: pointer;
+    padding: 25px;
+    background-color: rgb(10, 190, 79);
+    border-radius: 20px;
+    color: white;
+    font-size: 2vh;
+    font-weight: 600;
+    margin: 40px auto;
+}
 .SearchBar{
     display: flex;
     justify-content: center;
@@ -40,7 +55,7 @@
     border-radius: 15px;
     font-size: 2.5vh;
     color: white;
-    margin-right: 20px;
+    margin: 50px auto;
 }
 .SearchBar button{
     display: flex;
