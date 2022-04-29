@@ -120,13 +120,7 @@
    height: auto;
 }
 
-.card__Subcontainer p{
-    font-size: 1.6vh;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400;
-}
-
-.card__Subcontainer h3{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 900;
+.card__Subcontainer button{
+    background-color: black !important;
+    font-weight: 600;
 }
