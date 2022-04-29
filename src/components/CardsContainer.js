@@ -8,9 +8,7 @@ function CardsContainer() {
   const [apiInfo,SetapiInfo] = useState([]);
   const [chrBusqueda, SetchrBusqueda] = useState([]); // --->> aca vamos a meter los personajes filtrados y los mostraremos en el array de arriba
   const [busqueda ,Setbusqueda] = useState(" "); // --->> esto controla lo que vamos a escribir en la searchbar
-
   const url = "https://rickandmortyapi.com/api/character"
-
   const peticion = async () => {
    await fetch(url)
     .then(data => data.json())

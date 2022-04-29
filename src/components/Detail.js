@@ -8,21 +8,14 @@ function Detail() {
     const params = useParams();
 
     const [apiInfo,SetapiInfo] = useState([]);
-
-
-
-    const url = "https://rickandmortyapi.com/api/character"
-  
-    
+    const url = "https://rickandmortyapi.com/api/character"  
     useEffect(()=>{
       fetch(url)
     .then(data => data.json())
     .then(res => SetapiInfo(res.results))
     .catch(err => console.log(err))
     },[])
-
-    const res = apiInfo?.filter(char => char.id == Number(params.id))
-
+    const res = apiInfo?.filter(char => char.id === Number(params.id))
     let IDMAS = res[0]?.id;
 
     return (
