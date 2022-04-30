@@ -4,9 +4,7 @@ import Landing from "./components/Landing";
 import Detail from "./components/Detail";
 import Form from "./components/Form";
 
-
 function App (){
-  
   return(
   <div>
     <Routes >

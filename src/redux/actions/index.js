@@ -9,3 +9,21 @@ export function GetAllCharacter(){
         .catch(e => console.log(e))
     }
 }
+let id = 20
+export function createCharacter(object) {
+    return function (dispatch){
+        return dispatch({
+            type: "CREATE_CHARACTER",
+            payload: {id: id,...object}
+        })
+    }
+}
+
+export function deleteCharacter(id){
+    return function(dispatch) {
+        return dispatch({
+            type: "DELETE_CHARACTER",
+            payload: id
+        })
+    }
+}

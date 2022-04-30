@@ -11,6 +11,16 @@ const rootReducer = (state = initialState, {type, payload}) => {
                 ...state, 
                 characters: payload
             }
+        case "CREATE_CHARACTER":
+            return{
+                ...state,
+                characters: state.characters.concat(payload)
+            }
+        case "DELETE_CHARACTER":
+            return{
+                ...state,
+                chacacters: state.characters.filter(c => c.id !== payload)
+            }
         default: 
             return {
                 ...state
